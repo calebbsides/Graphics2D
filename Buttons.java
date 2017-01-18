@@ -71,7 +71,7 @@ public class Buttons {
 				double Sy = Double.parseDouble(SyS);
 
 				for (Line l : dataLines) {
-					l.Scale(Sx, Sy, l.Cx, l.Cy);
+					l.Scale(Sx, Sy, l.getCX(), l.getCY());
 				}
 
 			}
