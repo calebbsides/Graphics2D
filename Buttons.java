@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 public class Buttons {
 
@@ -24,11 +25,11 @@ public class Buttons {
 		rotateButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				System.out.print("Angle: ");
-				int angle = input.nextInt();
+				String angleS = JOptionPane.showInputDialog("Angle:");
+				double angle = Double.parseDouble(angleS);
 
 				for (Line l : dataLines) {
-					l.Rotate(angle, l.Cx, l.Cy);
+					l.Rotate(angle, l.getCX(), l.getCY());
 				}
 
 			}
@@ -43,10 +44,10 @@ public class Buttons {
 		translateButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				System.out.print("Tx: ");
-				int Tx = input.nextInt();
-				System.out.print("Ty: ");
-				int Ty = input.nextInt();
+				String TxS = JOptionPane.showInputDialog("Tx:");
+				double Tx = Double.parseDouble(TxS);
+				String TyS = JOptionPane.showInputDialog("Ty:");
+				double Ty = Double.parseDouble(TyS);
 
 				for (Line l : dataLines) {
 					l.BasicTranslate(Tx, Ty);
@@ -65,10 +66,10 @@ public class Buttons {
 		scaleButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				System.out.print("Sx: ");
-				int Sx = input.nextInt();
-				System.out.print("Sy: ");
-				int Sy = input.nextInt();
+				String SxS = JOptionPane.showInputDialog("Sx:");
+				double Sx = Double.parseDouble(SxS);
+				String SyS = JOptionPane.showInputDialog("Sy:");
+				double Sy = Double.parseDouble(SyS);
 
 				for (Line l : dataLines) {
 					l.Scale(Sx, Sy, l.Cx, l.Cy);
@@ -87,14 +88,14 @@ public class Buttons {
 		viewPortButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				System.out.print("x0: ");
-				int x0 = input.nextInt();
-				System.out.print("y0: ");
-				int y0 = input.nextInt();
-				System.out.print("x1: ");
-				int x1 = input.nextInt();
-				System.out.print("y1: ");
-				int y1 = input.nextInt();
+				String x0S = JOptionPane.showInputDialog("x0:");
+				int x0 = (int) Double.parseDouble(x0S);
+				String y0S = JOptionPane.showInputDialog("y0:");
+				int y0 = (int) Double.parseDouble(y0S);
+				String x1S = JOptionPane.showInputDialog("x1:");
+				int x1 = (int) Double.parseDouble(x1S);
+				String y1S = JOptionPane.showInputDialog("y1:");
+				int y1 = (int) Double.parseDouble(y1S);
 				
 				Line l = new Line(x0, y0, x1, y1);
 				dataLines.add(l);
