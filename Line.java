@@ -18,8 +18,8 @@ public class Line {
 		this.x1 = x1 + offsetX;
 		this.y1 = y1 + offsetY;
 
-		Cx = ((this.x0 + this.x1) / 2);
-		Cy = ((this.y0 + this.y1) / 2);
+		Cx = getCX();
+		Cy = getCY();
 
 		end0[0] = this.x0;
 		end0[1] = this.y0;
@@ -28,6 +28,14 @@ public class Line {
 		end1[0] = this.x1;
 		end1[1] = this.y1;
 		end1[2] = 1;
+	}
+	
+	public int getCX() {
+		return (this.x0 + this.x1) / 2;
+	}
+	
+	public int getCY() {
+		return (this.y0 + this.y1) / 2;
 	}
 	
 	//getTranslate
