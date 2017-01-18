@@ -154,7 +154,7 @@ public class Buttons {
 				    	writer.println(l);
 				    }
 				    
-				    System.out.println("Output Successful");
+				    JOptionPane.showMessageDialog(null, "Output Successful");
 				    writer.close();
 				} catch (Exception err) {
 					err.printStackTrace();
@@ -171,7 +171,7 @@ public class Buttons {
 		drawButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(dataLines.isEmpty()) {
-					System.out.println("No Lines To Draw!");
+					JOptionPane.showMessageDialog(null, "No Lines To Draw!");
 				} else {
 					drawLines();	
 				}
