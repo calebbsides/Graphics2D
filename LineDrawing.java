@@ -1,9 +1,6 @@
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
-//NOT ALL OF THIS CODE BELONGS TO ME 
-//I had some assistance in adjusting the line drawing algorithm to handle all cases 
-
 public class LineDrawing {
 
 	private static BufferedImage image = ImagePanel.img;
